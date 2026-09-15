@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(){
+    long long n, product = 1;
+    scanf("%lld", &n);
+
+    if(n < 0){
+        n = -n;
+    }
+
+    while(n > 0){
+        int digit = n % 10;
+
+        if(digit % 2 != 0){
+            product *= digit;
+        }
+
+        n /= 10;
+    }
+
+    printf("%lld\n", product);
+    return 0;
+}
